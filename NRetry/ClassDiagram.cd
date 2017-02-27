@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NRetry.CallRetryer">
+    <Position X="4.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAKAAAAAAAAAAAEAAAAABAAAAAAAAAAAABA=</HashCode>
+      <FileName>CallRetryer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRetry.OperationResultEventArgs&lt;TReturn&gt;" Collapsed="true">
+    <Position X="0.75" Y="13.25" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="NRetry.OperationResultEventArgs" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="13.13" />
+        <Point X="6" Y="13.5" />
+        <Point X="3.5" Y="13.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>OperationResultEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRetry.Retryer">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Retryer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.95" />
+  </Class>
+  <Class Name="NRetry.Retryer&lt;TReturn&gt;">
+    <Position X="2.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABAAAACAAAAAAAAAAAAAAAAABAAAAAAABAAAABA=</HashCode>
+      <FileName>Retryer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRetry.RetryerBase">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAgCAAAAQAAAAAAAAAAAAAIAAAEQABAAEABA=</HashCode>
+      <FileName>RetryerBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRetry.TaskRetryer">
+    <Position X="6.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAKAAAAAAgAAAAEAAAAABAAAAAAAAAAAABA=</HashCode>
+      <FileName>TaskRetryer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRetry.OperationResultEventArgs" Collapsed="true">
+    <Position X="4.75" Y="12.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAACAAAAAAQAAkAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>OperationResultEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRetry.ProcessRetryer&lt;TReturn&gt;">
+    <Position X="0.75" Y="9.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="NRetry.ProcessRetryer&lt;TReturn&gt;.FailureDetectorDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ProcessRetryer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <InheritanceLine Type="NRetry.Retryer&lt;TReturn&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="10.022" />
+        <Point X="3.25" Y="10.957" />
+        <Point X="2.25" Y="10.957" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAKgAAAAAAAAAAEAAAAAAAAIAQAAAAAAABA=</HashCode>
+      <FileName>ProcessRetryer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="NRetry.RetryConfig" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAA=</HashCode>
+      <FileName>RetryConfig.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="NRetry.IRetryable&lt;T&gt;" Collapsed="true">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRetryable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRetry.IRetryer">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="NRetry.IRetryerBase" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="4.625" Y="2.52" />
+        <Point X="4.625" Y="2.895" />
+        <Point X="6.5" Y="2.895" />
+        <Point X="6.5" Y="5.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRetryer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRetry.IRetryer&lt;TReturn&gt;">
+    <Position X="1.5" Y="5.25" Width="1.75" />
+    <InheritanceLine Type="NRetry.IRetryerBase" ManuallyRouted="true">
+      <Path>
+        <Point X="4.625" Y="2.52" />
+        <Point X="4.625" Y="2.895" />
+        <Point X="2.375" Y="2.895" />
+        <Point X="2.375" Y="5.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAACAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRetryer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRetry.IRetryerBase">
+    <Position X="3.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAQAAAAEAAA=</HashCode>
+      <FileName>IRetryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="NRetry.ResultEnum" Collapsed="true">
+    <Position X="2.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAgAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>ResultEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
