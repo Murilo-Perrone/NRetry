@@ -41,12 +41,14 @@ namespace NRetry.Tests {
         [TestMethod()]
         [ExpectedException(typeof(OperationCanceledException))]
         public void FailureSyncStaticTest() {
+            Exception error = null;
+
             var instance = TaskRetryer.DefaultInstance;
             instance.Config = GetConfigForFailure();
             instance.RetryableOperation = Try;
+            instance.ExceptionLogger = (ex) => error = ex.Exception;
 
             // Trying with exception suppression
-            Exception error = null;
             bool actual = TaskRetryer.ProcessRetries(Try, null); // out error
             Assert.AreEqual(_tries, TriesToFail);
             Assert.AreEqual(_tries, actual);

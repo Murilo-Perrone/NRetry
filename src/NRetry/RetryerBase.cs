@@ -35,8 +35,8 @@ namespace NRetry {
     public abstract class RetryerBase : IRetryerBase {
         protected RetryerBase() {
             Config = new RetryConfig {
-                MaximumAttempts = 3,
-                RetryInterval = 60 * 1000, // 60 seconds
+                //MaximumAttempts = 3,
+                //RetryInterval = 60 * 1000, // 60 seconds
             };
         }
 

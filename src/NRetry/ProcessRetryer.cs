@@ -34,7 +34,7 @@ namespace NRetry {
                         throw new ArgumentNullException("FailureDetector",
                                                         "Must specify the failure detector delegate when using failure detection method = ByFailureDetector.");
                     }
-                    return FailureDetector(_return);
+                    return !FailureDetector(_return);
                 default:
                     throw new ArgumentOutOfRangeException("FailureDetectionMethod");
             }

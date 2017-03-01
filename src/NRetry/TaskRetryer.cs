@@ -1,9 +1,10 @@
 ﻿using System;
 
 namespace NRetry {
+    /// <summary>
+    /// Simplified retryer for an operation which returns a boolean value indicating success or failure.
+    /// </summary>
     public class TaskRetryer : Retryer {
-        public Func<bool> RetryableOperation;
-
         public TaskRetryer() {
         }
 
@@ -11,6 +12,8 @@ namespace NRetry {
             RetryableOperation = operation.Attempt;
             RecoveryOperation = operation.Recover;
         }
+
+        public Func<bool> RetryableOperation { private get; set; }
 
         protected override bool AttemptOnce() {
             return RetryableOperation();
@@ -22,7 +25,7 @@ namespace NRetry {
         /// <remarks>Throws ArgumentNullException if no attempt method is defined.
         /// Ignores any previously stored Attempt and Recovery delegates.</remarks>
         /// <returns>True if any of the attempts succeeds.</returns>
-        public bool Process(Func<bool> attempter, Action recoverer) {
+        public bool Process(Func<bool> attempter, Action recoverer = null) {
             if (attempter == null)
                 throw new ArgumentNullException("attempter");
 
@@ -39,7 +42,7 @@ namespace NRetry {
             get { return _defaultInstance; }
         }
 
-        public static bool ProcessRetries(Func<bool> attempter, Action recoverer) {
+        public static bool ProcessRetries(Func<bool> attempter, Action recoverer = null) {
             return DefaultInstance.Process(attempter, recoverer);
         }
 

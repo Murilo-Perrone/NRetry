@@ -54,6 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallRetryerTest.cs" />
+    <Compile Include="NumberTest.cs" />
+    <Compile Include="KidsCountTest.cs" />
+    <Compile Include="MultiServerTest.cs" />
     <Compile Include="TaskRetryerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
